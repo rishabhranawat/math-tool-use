@@ -1,0 +1,41 @@
+[
+    {
+        "user_input": "Daniel has 7 boxes, and each box contains 9 items. He plans to buy 3 additional boxes with 8 items in each. If the total number of items exceeds 75, he will give away 5 items. Otherwise, he will keep them all.",
+        "expected_tool_calls": [
+            {
+	            "name": "calculate",
+	            "arguments": "{\"expression\": \"7 * 9 + 3 * 8\"}"
+            },
+            {       
+            	"name": "calculate",
+                "arguments": "{\"expression\": \"7 * 9 + 3 * 8 - 5\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "Sophie has 15 flowers and plans to buy 5 bouquets with 3 flowers in each. If the total number of flowers exceeds 30 after buying, she will donate 6 flowers. Otherwise, she will keep them all.",
+        "expected_tool_calls": [
+            {
+	            "name": "calculate",
+	            "arguments": "{\"expression\": \"15 + 5 * 3\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"15 + 5 * 3 - 6\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "James has 10 coins and decides to buy 4 sets, each containing 5 coins. If his total exceeds 40 coins, he will give away 8 coins. Otherwise, he will keep them all.",
+        "expected_tool_calls": [
+            {
+	            "name": "calculate",
+	            "arguments": "{\"expression\": \"10 + 4 * 5\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"10 + 4 * 5 - 8\"}"
+            }
+        ]
+    }
+]
