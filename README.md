@@ -20,7 +20,7 @@ This project aims to understand and improve how a model performs on a basic Mult
 ## Method
 The following steps outline the approach for achieving the desired model behavior:
 
-- **Generate a Supervised Fine-Tuning (SFT) Dataset**: Using a larger model (`gpt-4`).
+- **Generate a Supervised Fine-Tuning (SFT) Dataset**: Using a larger model (`gpt-4o`).
 - **Fine-Tune**: Apply fine-tuning to the base model.
 - **Evaluate**: Assess performance to verify if the model produces expected reasoning steps.
 
