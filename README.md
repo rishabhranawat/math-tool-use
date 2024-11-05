@@ -33,11 +33,11 @@ The following steps outline the approach for achieving the desired model behavio
 | sft-10samples        | 85.00%   | Fine-tuned model with 10 sample training examples       |
 | sft-30samples        | 90.00%   | Fine-tuned model with 30 sample training examples       |
 
-## Demo
 Initial results demonstrate that supervised fine-tuning (SFT) helps achieve the intended behavior. Key insights include:
 
 - **Improved Stability**: Using SFT enables consistent model responses, addressing limitations found when relying solely on prompts.
 - **Scalability**: Hard-coding specific instructions in the context proved cumbersome and unscalable. SFT allows this capability to integrate smoothly as part of a broader functionality set without requiring rigid instructions.
 
+## Demo
 [Math Tool Use Reasoning - Demo](https://github.com/user-attachments/assets/6c5c5190-54f2-45f3-ab13-2294ac8ffaea)
 
