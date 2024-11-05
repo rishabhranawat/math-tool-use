@@ -24,6 +24,15 @@ The following steps outline the approach for achieving the desired model behavio
 - **Fine-Tune**: Apply fine-tuning to the base model.
 - **Evaluate**: Assess performance to verify if the model produces expected reasoning steps.
 
+## Results
+
+| Model                | Accuracy | Description                                             |
+|----------------------|----------|---------------------------------------------------------|
+| base                 | 0.00%    | Base `gpt-3.5-turbo` model without any additional context |
+| base_with_context    | 0.00%    | Base model with 1 example in the system prompt          |
+| sft-10samples        | 85.00%   | Fine-tuned model with 10 sample training examples       |
+| sft-30samples        | 90.00%   | Fine-tuned model with 30 sample training examples       |
+
 ## Demo
 Initial results demonstrate that supervised fine-tuning (SFT) helps achieve the intended behavior. Key insights include:
 

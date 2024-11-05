@@ -3,11 +3,11 @@
         "user_input": "Daniel has 7 boxes, and each box contains 9 items. He plans to buy 3 additional boxes with 8 items in each. If the total number of items exceeds 75, he will give away 5 items. Otherwise, he will keep them all.",
         "expected_tool_calls": [
             {
-	            "name": "calculate",
-	            "arguments": "{\"expression\": \"7 * 9 + 3 * 8\"}"
+                "name": "calculate",
+                "arguments": "{\"expression\": \"7 * 9 + 3 * 8\"}"
             },
             {       
-            	"name": "calculate",
+                "name": "calculate",
                 "arguments": "{\"expression\": \"7 * 9 + 3 * 8 - 5\"}"
             }
         ]
@@ -16,8 +16,8 @@
         "user_input": "Sophie has 15 flowers and plans to buy 5 bouquets with 3 flowers in each. If the total number of flowers exceeds 30 after buying, she will donate 6 flowers. Otherwise, she will keep them all.",
         "expected_tool_calls": [
             {
-	            "name": "calculate",
-	            "arguments": "{\"expression\": \"15 + 5 * 3\"}"
+                "name": "calculate",
+                "arguments": "{\"expression\": \"15 + 5 * 3\"}"
             },
             {
                 "name": "calculate",
@@ -29,12 +29,103 @@
         "user_input": "James has 10 coins and decides to buy 4 sets, each containing 5 coins. If his total exceeds 40 coins, he will give away 8 coins. Otherwise, he will keep them all.",
         "expected_tool_calls": [
             {
-	            "name": "calculate",
-	            "arguments": "{\"expression\": \"10 + 4 * 5\"}"
+                "name": "calculate",
+                "arguments": "{\"expression\": \"10 + 4 * 5\"}"
             },
             {
                 "name": "calculate",
                 "arguments": "{\"expression\": \"10 + 4 * 5 - 8\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "Alice has 6 baskets, each containing 8 fruits. She plans to buy 2 additional baskets with 5 fruits in each. If the total number of fruits exceeds 50, she will eat 4 fruits. Otherwise, she will keep them all.",
+        "expected_tool_calls": [
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"6 * 8 + 2 * 5\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"6 * 8 + 2 * 5 - 4\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "Tom has 20 marbles and plans to buy 3 packs of 7 marbles each. If his total marbles exceed 50, he will give 10 marbles to his friend. Otherwise, he will keep them all.",
+        "expected_tool_calls": [
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"20 + 3 * 7\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"20 + 3 * 7 - 10\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "Emma bought 4 boxes of crayons, each containing 6 crayons. She plans to buy 3 more boxes with 8 crayons each. If the total exceeds 50 crayons, she will give away 5. Otherwise, she will keep them all.",
+        "expected_tool_calls": [
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"4 * 6 + 3 * 8\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"4 * 6 + 3 * 8 - 5\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "Mike has 12 pencils and decides to buy 4 packs of 5 pencils each. If his total exceeds 40 pencils, he will donate 6 pencils. Otherwise, he will keep them all.",
+        "expected_tool_calls": [
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"12 + 4 * 5\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"12 + 4 * 5 - 6\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "Lily has 8 books and buys 6 more books. If her total exceeds 12 books, she will donate 3 books. Otherwise, she will keep them all.",
+        "expected_tool_calls": [
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"8 + 6\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"8 + 6 - 3\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "John has 5 toy cars and buys 3 packs with 4 cars in each. If his total exceeds 20 cars, he will give away 2 cars. Otherwise, he will keep them all.",
+        "expected_tool_calls": [
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"5 + 3 * 4\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"5 + 3 * 4 - 2\"}"
+            }
+        ]
+    },
+    {
+        "user_input": "Nina has 30 stickers and plans to buy 2 sets with 12 stickers in each set. If her total stickers exceed 50, she will give 5 stickers to her friend. Otherwise, she will keep them all.",
+        "expected_tool_calls": [
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"30 + 2 * 12\"}"
+            },
+            {
+                "name": "calculate",
+                "arguments": "{\"expression\": \"30 + 2 * 12 - 5\"}"
             }
         ]
     }

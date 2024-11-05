@@ -21,11 +21,27 @@ in_context_example = (
     "User: Sarah has 10 plants and plans to buy 4 packs of plants with 6 plants in each pack. "
     "If the total number of plants exceeds 35 after buying, she will gift 5 plants. Otherwise, she will keep them all.\n"
     "Assistant's tool calls:\n"
-    "1. calculate({'expression': '10 + 4 * 6'})\n"
-    "2. calculate({'expression': '10 + 4 * 6 - 5'})\n"
-    "3. calculate({'expression': '10 + 4 * 6'})\n\n"
+    "1. Tool call:\n"
+    "   - id: call_id_1\n"
+    "   - type: function\n"
+    "   - function:\n"
+    "       name: calculate\n"
+    "       arguments: {\"expression\": \"10 + 4 * 6\"}\n"
+    "2. Tool call:\n"
+    "   - id: call_id_2\n"
+    "   - type: function\n"
+    "   - function:\n"
+    "       name: calculate\n"
+    "       arguments: {\"expression\": \"10 + 4 * 6 - 5\"}\n"
+    "3. Tool call:\n"
+    "   - id: call_id_3\n"
+    "   - type: function\n"
+    "   - function:\n"
+    "       name: calculate\n"
+    "       arguments: {\"expression\": \"10 + 4 * 6\"}\n\n"
     "Now, given a similar problem, follow the same approach to respond."
 )
+
 
 def evaluate_model(model_label, eval_data, use_context=False):
     """
@@ -141,8 +157,6 @@ def main(argv):
     for label in model_map:
         # If model type requires in-context example, set use_context to True
         use_context = "with_context" in label
-        if use_context:
-            label = "base"
         evaluate_model(label, eval_data, use_context=use_context)
 
 # Entry point for the script
